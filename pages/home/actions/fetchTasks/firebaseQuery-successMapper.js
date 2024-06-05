@@ -1,0 +1,1 @@
+return Object.entries({{data}}).map(([index, task]) => {task.id = index; return task});

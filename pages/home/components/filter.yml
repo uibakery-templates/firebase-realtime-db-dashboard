@@ -1,0 +1,155 @@
+id: '17161840190710.7774185796635464'
+definitionId: form
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 17
+      y: 1
+      w: 7
+      h: 14
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 14
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: filter
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: ''
+  columns: '3'
+  showSubmitBtn:
+    value: false
+    dataValue: 'true'
+    withData: false
+  heightMode: auto
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: none
+      shadow: none
+      border: none
+actions:
+  changeEvent:
+    - action: '17161956250640.18441472405239479'
+      paramCode: ''
+      index: 0
+slots:
+  - id: '17161840190710.023131856476283685'
+    name: structure
+    children:
+      - id: '17161840191180.6908825930890139'
+        definitionId: atomicSelect
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect
+          prop: status
+          primaryKey: false
+          options:
+            value:
+              - value: In Progress
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '17161840191180.4171789224760172'
+                title: In Progress
+              - value: Paused
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '17161954364630.9203363451539048'
+                title: Paused
+              - value: Backlog
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '17161954430270.24398590269216913'
+                title: Backlog
+            dataValue: |-
+              [
+                {
+                  value: 'Admin',
+                  color: 'primary'
+                }
+              ]
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          title: Status
+          placeholder: Select
+        parentSlotId: '17161840190710.023131856476283685'
+        index: 2
+        slots: []
+      - id: '17161840191180.8956512615380392'
+        definitionId: atomicDate
+        parentSlotId: '17161840190710.023131856476283685'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDate
+          prop: start
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          maxDate: '{{ui.filter.value.end}}'
+          title: Date range start
+          placeholder: Select date
+        index: 0
+        slots: []
+      - id: '17161953626020.7178411570624648'
+        definitionId: atomicDate
+        parentSlotId: '17161840190710.023131856476283685'
+        styles: {}
+        properties:
+          name: atomicDate2
+          prop: end
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          minDate: '{{ui.filter.value.start}}'
+          title: Date range end
+          placeholder: Select date
+        index: 1
+        slots: []

@@ -1,0 +1,36 @@
+id: '17161987147830.49001383561077794'
+kind: workflow
+name: getStatistics
+nameConfigured: true
+steps:
+  - id: '17161987247940.7027665556057188'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.getStatistics.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.getStatistics.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.getStatistics.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17164715231660.8161869451761095'

@@ -1,0 +1,16 @@
+id: '17161847838240.6319996771214007'
+definitionId: tab
+parentSlotId: '17161839343800.14436506077519162'
+styles: {}
+properties:
+  name: tab3
+  title: Backlog
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+index: 2
+slots:
+  - id: '17161847838240.8287644137713017'
+    name: content
+    children:
+      - gridView3/gridView3.yml

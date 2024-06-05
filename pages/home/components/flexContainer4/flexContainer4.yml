@@ -1,0 +1,59 @@
+id: '17162065566480.8364880745994743'
+definitionId: flexContainer
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 75
+      w: 6
+      h: 28
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 325
+        widthUnit: px
+        heightValue: 100
+        heightUnit: px
+      grow: '1'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 72
+      w: 24
+      h: 33
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 325
+        widthUnit: px
+        heightValue: 100
+        heightUnit: px
+      grow: '1'
+      shrink: '0'
+properties:
+  heightMode: fixed
+  name: flexContainer4
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+actions: {}
+slots:
+  - id: '17162065566480.24746814919092963'
+    name: content
+    children:
+      - mostTasksAssignedMetric.yml
+      - mostTasksAssignedMetric2.yml

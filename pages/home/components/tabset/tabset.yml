@@ -1,0 +1,44 @@
+id: '17161839343800.351205771996858'
+definitionId: tabs
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 98
+      w: 12
+      h: 112
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 272
+      w: 24
+      h: 156
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: tabset
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  heightMode: fixed
+actions: {}
+slots:
+  - id: '17161839343800.14436506077519162'
+    name: tabs
+    children:
+      - tab/tab.yml
+      - tab2/tab2.yml
+      - tab3/tab3.yml

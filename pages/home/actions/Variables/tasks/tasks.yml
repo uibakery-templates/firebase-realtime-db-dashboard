@@ -1,0 +1,18 @@
+id: '17161957964100.6279289743160199'
+kind: store_item
+name: tasks
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17161958133730.7514316137050809'
+storeItem:
+  value: '[]'
+  valueType: array
+  initialValue: '[]'
+  version: 1
+selected: true
+configured: true
+config:
+  preserveStateOnPageChange: false

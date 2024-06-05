@@ -1,0 +1,64 @@
+id: '17161884565940.9528337336885195'
+definitionId: cardNew
+parentSlotId: '17161882323140.17296813903401698'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 32
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    status:
+      value: default
+      dataValue: default
+      withData: false
+    backgroundColor:
+      value: default
+      dataValue: default
+      withData: false
+    accent:
+      value: default
+      dataValue: default
+      withData: false
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 41
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: taskCard
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  heightMode: fixed
+actions: {}
+slots:
+  - id: '17161884565940.7625694417612179'
+    name: header
+    children:
+      - taskCardHeader.yml
+      - taskCardIcon.yml
+  - id: '17161884565940.22696641316624078'
+    name: footer
+    children: []
+  - id: '17161884565940.47123912060206563'
+    name: views
+    children:
+      - view_2/view_2.yml

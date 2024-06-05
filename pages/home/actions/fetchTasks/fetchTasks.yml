@@ -1,0 +1,164 @@
+id: '17161878799230.9065807016524015'
+kind: workflow
+name: fetchTasks
+nameConfigured: true
+steps:
+  - id: '17161878883800.10107939491642659'
+    type: firebaseQuery
+    name: firebaseQuery
+    params:
+      - type: datasourceId
+        value: My Data
+        valueType: string
+        mustSelectFirst: true
+      - type: firebaseMethod
+        value: realtimeDbQuery
+        valueType: custom
+      - type: realtimeDbOrderingType
+        value: realtimeDbOrderingByChild
+        valueType: custom
+      - type: realtimeDbLimitType
+        value: realtimeDbLimitToFirst
+        valueType: custom
+      - type: objectUid
+        value: tasks/
+        valueType: interpolatedValue
+      - type: firebaseAuthListUsersNumberOfUsers
+        value: ''
+        valueType: interpolatedValue
+      - type: firebaseAuthEmail
+        value: ''
+        valueType: interpolatedValue
+      - type: firebaseAuthPhoneNumber
+        value: ''
+        valueType: interpolatedValue
+      - type: firestoreCollectionName
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbOrderByChildValue
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbLimitNumber
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbEqualTo
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbStartAt
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbEndAt
+        value: ''
+        valueType: interpolatedValue
+      - type: realtimeDbUseOrdering
+        value: false
+        valueType: custom
+      - type: realtimeDbUseLimit
+        value: false
+        valueType: custom
+      - type: realtimeDbUseEqualTo
+        value: false
+        valueType: custom
+      - type: realtimeDbUseStartAt
+        value: false
+        valueType: custom
+      - type: realtimeDbUseEndAt
+        value: false
+        valueType: custom
+      - type: dataObject
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: firestoreQueryFilters
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: firestoreQueryOrdering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+        interpolationType: string
+      - type: successMapper
+        value: ./firebaseQuery-successMapper.js
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17162019394150.25389284805659784'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17161957964100.6279289743160199'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17162021822290.6801368962659764'
+    type: executeAction
+    name: updateStatistics
+    params:
+      - type: action
+        value: '17161987147830.49001383561077794'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./updateStatistics-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ./updateStatistics-successMapper.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.fetchTasks.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.fetchTasks.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.fetchTasks.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

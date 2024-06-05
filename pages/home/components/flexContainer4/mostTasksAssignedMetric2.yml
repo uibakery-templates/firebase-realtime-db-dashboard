@@ -1,0 +1,108 @@
+id: '17162065566480.10848049463821963'
+definitionId: metric
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 11
+      h: 39
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 50
+        widthUnit: '%'
+        heightValue: 115
+        heightUnit: px
+      grow: ''
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 39
+      w: 24
+      h: 39
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 50
+        widthUnit: '%'
+        heightValue: 129
+        heightUnit: px
+      grow: ''
+      shrink: '0'
+properties:
+  data: '{{actions.getStatistics.data.mostTasksAssigned}}'
+  name: mostTasksAssignedMetric2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Most tasks assigned
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    value: false
+    dataValue: '{{actions.fetchTasks.loading}}'
+    withData: true
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: default
+      shadow: default
+      border: default
+parentSlotId: '17162065566480.24746814919092963'
+index: 0
+actions: {}
+slots:
+  - id: '17162065566480.7977324665616021'
+    name: metricField
+    children:
+      - id: '17162065566480.7380508887693182'
+        definitionId: atomicString
+        styles: {}
+        properties:
+          name: atomicString7
+          prop: taskCount
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17162065566480.7977324665616021'
+        index: 0
+        slots: []
+  - id: '17162065566480.33768749856354585'
+    name: additionalField
+    children:
+      - id: '17162065566480.9936374087920115'
+        definitionId: atomicString
+        styles: {}
+        properties:
+          name: atomicString8
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17162065566480.33768749856354585'
+        index: 0
+        slots: []
+  - id: '17162065566480.8720130017661509'
+    name: groupByField
+    children: []

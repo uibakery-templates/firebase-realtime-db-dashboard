@@ -1,0 +1,98 @@
+id: '17162065486100.3595209822608698'
+definitionId: metric
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 39
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 33
+        heightValue: 120
+        heightUnit: px
+        widthUnit: '%'
+      grow: '1'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 117
+      w: 24
+      h: 39
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: auto
+        heightValue: 129
+        heightUnit: px
+      grow: '1'
+      shrink: '0'
+properties:
+  data: '{{actions.getStatistics.data}}'
+  name: tasksInProgressMetric3
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Tasks in progress
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    value: false
+    dataValue: '{{actions.fetchTasks.loading}}'
+    withData: true
+parentSlotId: '17162065486100.17988412798127906'
+index: 0
+actions: {}
+slots:
+  - id: '17162065486100.6288514559664209'
+    name: metricField
+    children:
+      - id: '17162065486100.2967895368329021'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber4
+          prop: inProgressTasks
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17162065486100.6288514559664209'
+        index: 0
+        slots: []
+  - id: '17162065486100.18608493841087115'
+    name: additionalField
+    children:
+      - id: '17162065486100.8499126515937983'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString5
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17162065486100.18608493841087115'
+        index: 1
+        slots: []
+  - id: '17162065486100.23994803581567226'
+    name: groupByField
+    children: []

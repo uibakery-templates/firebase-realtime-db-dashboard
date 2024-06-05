@@ -1,0 +1,72 @@
+id: '17161833354490.07270130694740495'
+definitionId: chart
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 2
+      w: 12
+      h: 88
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 105
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dataset: '{{state.tasks}}'
+  config: "return {\n \ttitle: {\n    text: 'Weekly Traffic',\n    padding: 10\n  },\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n      }\n    }\n  },\n  legend: {\n    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine'],\n    padding: 30\n  },\n  grid: {\n    left: '3%',\n    right: '4%',\n    bottom: '3%',\n    containLabel: true\n  },\n  xAxis: [\n    {\n      type: 'category',\n      boundaryGap: false,\n      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']\n    }\n  ],\n  yAxis: [\n    {\n      type: 'value'\n    }\n  ],\n  series: [\n    {\n      name: 'Email',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [120, 132, 101, 134, 90, 230, 210]\n    },\n    {\n      name: 'Union Ads',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [220, 182, 191, 234, 290, 330, 310]\n    },\n    {\n      name: 'Video Ads',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [150, 232, 201, 154, 190, 330, 410]\n    },\n    {\n      name: 'Direct',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [320, 332, 301, 334, 390, 330, 320]\n    },\n    {\n      name: 'Search Engine',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [820, 932, 901, 934, 1290, 1330, 1320]\n    }\n  ]\n};"
+  name: tasksDistributionChart
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Task distribution
+  type: barChart
+  structure:
+    - title: Tasks
+      data: []
+      color: primary
+      xProp: due_date
+      yProp: value
+      ignoreTimezone: false
+      __UIBAKERY__SYSTEM_ID__: '17161882881260.5062554673552437'
+      groupType: day
+      groupFunctionType: count
+  showLoading:
+    withData: true
+    dataValue: '{{actions.fetchTasks.loading}}'
+    value: false
+  barsRounderdCorners: false
+  barsWidth: '75'
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: default
+      shadow: default
+      border: default
+  useJsConfig: ui
+actions: {}
+slots: []
