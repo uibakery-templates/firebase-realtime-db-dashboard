@@ -3,14 +3,10 @@ kind: workflow
 name: fetchTasks
 nameConfigured: true
 steps:
-  - id: '17161878883800.10107939491642659'
+  - id: '17181025968290.5201164656696662'
     type: firebaseQuery
-    name: firebaseQuery
+    name: firebaseQuery2
     params:
-      - type: datasourceId
-        value: My Data
-        valueType: string
-        mustSelectFirst: true
       - type: firebaseMethod
         value: realtimeDbQuery
         valueType: custom
@@ -86,7 +82,7 @@ steps:
         valueType: custom
         interpolationType: string
       - type: successMapper
-        value: ./firebaseQuery-successMapper.js
+        value: ./firebaseQuery2-successMapper.js
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
@@ -94,9 +90,12 @@ steps:
       - type: mapperEnabled
         value: true
         valueType: custom
+      - type: datasourceId
+        value: RealtimeDB
+        valueType: custom
     level: 0
     fallthroughError: false
-    isChanged: true
+    isChanged: false
   - id: '17162019394150.25389284805659784'
     type: putInStore
     name: save
